@@ -11,11 +11,11 @@
 <body>
 <div id="cc" class="easyui-layout" data-options="fit:true">
     <div data-options="region:'north'" style="height:50px"></div>
-    <div data-options="region:'south',split:true" style="height:5px;"></div>
+    <div data-options="region:'south'" style="height:5px;"></div>
     <div data-options="region:'east'" style="width:5px;"></div>
 
     <div data-options="region:'west',split:true" title="总经办：平台商" style="width:200px;">
-        <div id="aa" class="easyui-accordion" data-options="fit:true">
+        <div id="treePanel" class="easyui-accordion" data-options="fit:true">
             <div title="系统管理" data-options="iconCls:'icon-save',selected:true" style="overflow:auto;padding:10px;">
                 <ul id="setting" class="easyui-tree" data-options="lines:true">
                     <li>
