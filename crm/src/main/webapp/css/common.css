@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.icon-system {background: url(../images/system.png) no-repeat center center;}
+.icon-business {background: url(../images/business.png) no-repeat center center;}
+.icon-chart {background: url(../images/chart.png) no-repeat center center;}
+.icon-tool {background: url(../images/tool.png) no-repeat center center;}
+.icon-sync {background: url(../images/sync.png) no-repeat center center;}
+
+input[type='text']{height:32px !important;width:200px !important;}
+span.textbox{height:34px !important;width:200px !important;}
