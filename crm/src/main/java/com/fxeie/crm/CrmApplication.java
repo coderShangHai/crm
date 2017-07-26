@@ -6,6 +6,8 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
+import com.fxeie.crm.filter.SessionFilter;
+
 import java.util.Collections;
 
 @SpringBootApplication
@@ -23,9 +25,20 @@ public class CrmApplication {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(encodingFilter);
         registrationBean.setUrlPatterns(Collections.singleton("/*"));
+        registrationBean.setOrder(1);
         return registrationBean;
     }
-
+//    @Bean
+//    public FilterRegistrationBean filterSessionBean() {
+//    	SessionFilter sessionFilter = new SessionFilter();
+//    	
+//    	
+//        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+//        registrationBean.setFilter(sessionFilter);
+//        registrationBean.setUrlPatterns(Collections.singleton("/*"));
+//        registrationBean.setOrder(2);
+//        return registrationBean;
+//    }
     public static void main(String[] args) {
         SpringApplication.run(CrmApplication.class, args);
     }
