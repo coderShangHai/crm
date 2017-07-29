@@ -1,7 +1,6 @@
 package com.fxeie.crm.controller.business;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,16 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fxeie.crm.model.PageResult;
 
 @Controller
-@RequestMapping("account")
-public class AccountController {
-	private String ROOT_PATH = "business/account/";
+@RequestMapping("deposit")
+public class DepositController {
+	private String ROOT_PATH = "business/deposit/";
 	@RequestMapping(value="index",method=RequestMethod.GET)
 	public String index(){
 		return ROOT_PATH + "index";
-	}
-	@RequestMapping(value="detail",method=RequestMethod.GET)
-	public String detail(){
-		return ROOT_PATH + "detail";
 	}
 	@RequestMapping(value="list",method=RequestMethod.POST)
 	@ResponseBody
@@ -32,21 +27,21 @@ public class AccountController {
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		for(int i=0;i<10;i++){
 			Map<String,Object> map = new HashMap<String,Object>();
-			map.put("tempAccount", "888800000"+(i+1));
-			map.put("applyDate", new Date());
-			map.put("nickName", "杨莉:"+i);
-			map.put("phoneNum", "15921661434");
-			map.put("email", "79627313@qq.com");
-			map.put("idCard", "411303198904075937");
-			map.put("country", "中国");
-			map.put("address", "中国 湖北省房县城关镇南街12号");
-			map.put("sameAccountNum", (i+1));
-			map.put("accountType", "标准账户");
-			map.put("lever", 100);
-			map.put("proxy", "703087");
-			map.put("state", true);
-			map.put("explain", "");
-			map.put("id", i+1);
+			map.put("account", "70161901"+i);
+			map.put("beijingTime", "20:24:07");
+			map.put("utc", "07:24:07");
+			map.put("depositType", "在线支付");
+			map.put("payBank", "建设银行");
+			map.put("usd", "1000");
+			map.put("cny", "6783.10");
+			map.put("exchangeRate", "6.7831");
+			map.put("name", "许静怡");
+			map.put("phone", "13614568034");
+			map.put("email", "393924215@qq.com");
+			map.put("totalDeposit", 0);
+			map.put("totalGold", 0);
+			map.put("status", true);
+			map.put("explain", "在线支付 实时到帐");
 			list.add(map);
 		}
 		page.setRows(list);

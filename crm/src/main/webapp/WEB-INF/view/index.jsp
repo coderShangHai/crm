@@ -109,7 +109,7 @@
                     <ul>
                         <li><a data-model="tab" data-url="${pageContext.request.contextPath}/account/index">账户审核</a>
                         </li>
-                        <li>入金审核</li>
+                        <li><a data-model="tab" data-url="${pageContext.request.contextPath}/deposit/index">入金审核</a></li>
                         <li>出金审核</li>
                     </ul>
                 </li>
