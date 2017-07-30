@@ -77,9 +77,9 @@
         <a title="修改登录信息"></a>
         <a title="退出系统"></a>
     </div>
-    <div class="easyui-accordion" style="width:100%;height:90%;">
+    <div class="easyui-accordion" style="width:95%;height:87%;">
         <div title="系统管理" data-options="iconCls:'icon-system'" style="overflow:auto;padding:10px;">
-            <ul class="easyui-tree" id="mt4_crm_system_tree">
+            <ul class="easyui-tree" name="mt4_crm_tree">
                 <li>
                     <span>系统设置</span>
                     <ul>
@@ -103,7 +103,7 @@
             </ul>
         </div>
         <div title="业务管理" data-options="iconCls:'icon-business'" style="padding:10px;">
-            <ul class="easyui-tree" id="mt4_crm_buiness_tree">
+            <ul class="easyui-tree" name="mt4_crm_tree">
                 <li>
                     <span>业务处理</span>
                     <ul>
@@ -141,7 +141,7 @@
             </ul>
         </div>
         <div title="分析监控" data-options="iconCls:'icon-chart'" style="padding:10px;">
-            <ul class="easyui-tree">
+            <ul class="easyui-tree" name="mt4_crm_tree">
                 <li>
                     <span>报表管理</span>
                     <ul>
@@ -153,11 +153,13 @@
             </ul>
         </div>
         <div title="常用工具" data-options="iconCls:'icon-tool'" style="padding:10px;">
-            <ul class="easyui-tree">
+            <ul class="easyui-tree" name="mt4_crm_tree">
                 <li>
                     <span>信息系统</span>
                     <ul>
-                        <li>企业邮件</li>
+                        <li>
+                            <a data-model="tab" data-url="${pageContext.request.contextPath}/enterpriseMail/index">企业邮件</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -207,7 +209,7 @@
             $(".easyui-tabs .panel-body", main_div).height($(window).height() - 50 - 30 - 15);
         }
 
-        $("#mt4_crm_system_tree,#mt4_crm_buiness_tree").tree({
+        $("ul[name='mt4_crm_tree'").tree({
             onClick: function (node) {
                 if (!node.children) {
                     var model = $(node.text).data("model");
