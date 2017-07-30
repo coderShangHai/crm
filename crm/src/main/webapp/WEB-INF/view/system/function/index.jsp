@@ -1,19 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <style type="text/css">
-.crm_system_function table {width:100%;}
-.crm_system_function table input[type='text']{height:32px !important;width:100px !important;}
-.crm_system_function fieldset{border:1px solid #d4d4d4;border-radius:5px;}
-.crm_system_function .up{background:url(${pageContext.request.contextPath}/images/up.png) no-repeat center center;display: block;width: 20px;height: 20px;float: left;}
-.crm_system_function .down{background:url(${pageContext.request.contextPath}/images/down.png) no-repeat center center;display: block;width: 20px;height: 20px;float: left;}
-.crm_system_function legend {cursor:pointer;}
-.crm_system_function table input[type='radio']{width:17px !important;height:17px !important;}
-.crm_system_function div a{height:30px;width:90px;margin-top:10px;}
-.crm_system_function div a .l-btn-text{line-height:28px;}
 
-.textbox {width:150px;height:25px;line-height:25px;}
-
-input[type='checkbox'],input[type='radio'] {display: inline-block;vertical-align: middle;margin-bottom: 5px; }
 </style>
 <div class="crm_system_function">
 	<fieldset>
