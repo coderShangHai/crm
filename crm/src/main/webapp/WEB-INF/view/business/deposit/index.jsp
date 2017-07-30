@@ -28,9 +28,9 @@
 		<a name="search" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
 		<a name="reset" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-refresh'"> </a>
 		<a name="reset" class="refresh"> </a>
-		<a name="search" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" style="float:right;margin-top:5px;">删除</a>
+		<a name="search" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" style="float:right;margin-top:2px;">删除</a>
 	</div>
-	<div name="list" style="overflow:auto;height:100%;">
+	<div name="list" style="overflow:auto;height:100%;width:100%;">
 		<div id="crm_buiness_deposit_list"></div>
 	</div>
 </div>

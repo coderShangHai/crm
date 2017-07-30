@@ -5,8 +5,21 @@
 .icon-tool {background: url(../images/tool.png) no-repeat center center;}
 .icon-sync {background: url(../images/sync.png) no-repeat center center;}
 
-input[type='text']{height:32px !important;width:200px !important;}
-span.textbox{height:34px !important;width:200px !important;}
+input[type='text']:not(.pagination-num){height:25px !important;width:200px !important;}
+span.textbox{height:27px !important;width:200px !important;}
 
 a.oper_right {display:block;width:100%;height:24px;background: url(../images/check_right.png) no-repeat center center;}
 a.refresh {background: url(../images/refresh.png) no-repeat center center;float: right;width: 24px;height: 24px;margin-top: 3px;margin-right: 10px;cursor: pointer;}
+/*功能设置页面css*/
+.crm_system_function table {width:100%;}
+.crm_system_function fieldset{border:1px solid #d4d4d4;border-radius:5px;}
+.crm_system_function .up{background:url(../images/up.png) no-repeat center center;display: block;width: 20px;height: 20px;float: left;}
+.crm_system_function .down{background:url(../images/down.png) no-repeat center center;display: block;width: 20px;height: 20px;float: left;}
+.crm_system_function legend {cursor:pointer;}
+.crm_system_function table input[type='radio']{width:17px !important;height:17px !important;}
+.crm_system_function div a{height:30px;width:90px;margin-top:10px;}
+.crm_system_function div a .l-btn-text{line-height:28px;}
+
+.textbox {width:150px;height:25px;line-height:25px;padding-left:3px;}
+
+input[type='checkbox'],input[type='radio'] {display: inline-block;vertical-align: middle;margin-bottom: 5px; }

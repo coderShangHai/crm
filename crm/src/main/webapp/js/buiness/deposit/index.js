@@ -10,7 +10,7 @@ $(function(){
 	function initGrid(){
 		var jsonData = {};
 		var gridId = $("#crm_buiness_deposit_list");
-		$("div[name='list']",main_div).height(main_div.height()-38);
+		$("div[name='list']",main_div).height(main_div.height()-29);
 		$.EasyUI.DataGrid({
 			gridId:gridId,
 			/*striped:true,*/
@@ -132,8 +132,13 @@ $(function(){
 				align:"center"
 			}]],onLoadSuccess:function(){
 			},onDblClickRow: function (rowIndex, rowData) {
-				console.log(rowData)
-				alert(111)
+				$.EasyUI.Window({
+                    url: "/account/index",
+                    type: "get",
+                    width: 1200,
+                    height: 600,
+                    title: "账户详情 "+rowData.account
+                });
 			}
 		});
 	};

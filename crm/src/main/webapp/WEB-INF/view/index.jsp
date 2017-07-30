@@ -6,6 +6,7 @@
     <link href="${pageContext.request.contextPath}/easyui/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="${pageContext.request.contextPath}/jquery/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/locale/easyui-lang-zh_CN.js"></script>  
     <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/common.js"></script>
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <title>MT4 CRM首页</title>
@@ -107,7 +108,7 @@
                 <li>
                     <span>业务处理</span>
                     <ul>
-                        <li><a data-model="tab" data-url="${pageContext.request.contextPath}/account/index">账户审核</a>
+                        <li><a data-model="tab" data-url="${pageContext.request.contextPath}/accountType/index">账户审核</a>
                         </li>
                         <li><a data-model="tab" data-url="${pageContext.request.contextPath}/deposit/index">入金审核</a></li>
                         <li>出金审核</li>
