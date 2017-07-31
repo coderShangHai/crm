@@ -7,17 +7,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fxeie.crm.model.ResultModel;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("global")
 public class GlobalController {
-	private String ROOT_PATH = "system/global/";
-	@RequestMapping(value="index",method=RequestMethod.GET)
-	public String index(){
-		return ROOT_PATH + "index";
-	}
-	@RequestMapping(value="save",method=RequestMethod.POST)
-	@ResponseBody
-	public ResultModel<String> save(){
-		return new ResultModel<String>(true,"修改成功","");
-	}
+
+    private static final String ROOT_PATH = "system/global/";
+
+    @RequestMapping(value = "index", method = RequestMethod.GET)
+    public String index(HttpServletRequest request) {
+        return ROOT_PATH + "index";
+    }
+
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    @ResponseBody
+    public ResultModel<String> save() {
+        return new ResultModel<>(true, "修改成功", "");
+    }
 }

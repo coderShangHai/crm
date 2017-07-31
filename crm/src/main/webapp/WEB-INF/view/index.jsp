@@ -3,10 +3,11 @@
 <html>
 <head>
     <link href="${pageContext.request.contextPath}/easyui/themes/icon.css" rel="stylesheet" type="text/css"/>
-    <link href="${pageContext.request.contextPath}/easyui/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/easyui/themes/bootstrap/easyui.css" rel="stylesheet"
+          type="text/css"/>
     <script type="text/javascript" src="${pageContext.request.contextPath}/jquery/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/locale/easyui-lang-zh_CN.js"></script>  
+    <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/common.js"></script>
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <title>MT4 CRM首页</title>
@@ -68,6 +69,10 @@
         .tabs li a span {
             cursor: pointer;
         }
+
+        img {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="easyui-layout" id="mt4_crm_main_div" data-options="fit:true">
@@ -78,7 +83,7 @@
         <a title="修改登录信息"></a>
         <a title="退出系统"></a>
     </div>
-    <div class="easyui-accordion" style="width:95%;height:87%;">
+    <div class="easyui-accordion" style="width:95%;height:92%;">
         <div title="系统管理" data-options="iconCls:'icon-system'" style="overflow:auto;padding:10px;">
             <ul class="easyui-tree" name="mt4_crm_tree">
                 <li>
@@ -110,7 +115,8 @@
                     <ul>
                         <li><a data-model="tab" data-url="${pageContext.request.contextPath}/accountType/index">账户审核</a>
                         </li>
-                        <li><a data-model="tab" data-url="${pageContext.request.contextPath}/deposit/index">入金审核</a></li>
+                        <li><a data-model="tab" data-url="${pageContext.request.contextPath}/deposit/index">入金审核</a>
+                        </li>
                         <li>出金审核</li>
                     </ul>
                 </li>
@@ -159,7 +165,8 @@
                     <span>信息系统</span>
                     <ul>
                         <li>
-                            <a data-model="tab" data-url="${pageContext.request.contextPath}/enterpriseMail/index">企业邮件</a>
+                            <a data-model="tab"
+                               data-url="${pageContext.request.contextPath}/enterpriseMail/index">企业邮件</a>
                         </li>
                     </ul>
                 </li>
@@ -210,7 +217,7 @@
             $(".easyui-tabs .panel-body", main_div).height($(window).height() - 50 - 30 - 15);
         }
 
-        $("ul[name='mt4_crm_tree'").tree({
+        $("ul[name='mt4_crm_tree']").tree({
             onClick: function (node) {
                 if (!node.children) {
                     var model = $(node.text).data("model");
