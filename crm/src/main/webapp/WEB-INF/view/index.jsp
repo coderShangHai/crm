@@ -152,7 +152,10 @@
                 <li>
                     <span>报表管理</span>
                     <ul>
-                        <li>日报表</li>
+                        <li>
+                            <a data-model="tab"
+                               data-url="${pageContext.request.contextPath}/reportManagement/daily/index">日报表</a>
+                        </li>
                         <li>月报表</li>
                         <li>综合报表</li>
                     </ul>
