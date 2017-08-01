@@ -5,6 +5,10 @@
 .icon-tool {background: url(../images/tool.png) no-repeat center center;}
 .icon-sync {background: url(../images/sync.png) no-repeat center center;}
 
+.icon-mail{
+    background:url('../images/email.png') no-repeat center center;
+}
+
 input[type='text']:not(.pagination-num){height:25px !important;width:200px !important;}
 span.textbox{height:27px !important;width:200px !important;}
 

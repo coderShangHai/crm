@@ -21,7 +21,7 @@
 
     <div style="float: right">
         <a id="enterpriseMail_setNature" href="#" style="margin-left: 400px" class="easyui-linkbutton" data-options="iconCls:'icon-set'">邮件类型设置</a>
-        <a id="enterpriseMail_sendMail" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-set'">邮件</a>
+        <a id="enterpriseMail_sendMail" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-mail'">邮件</a>
         <a id="enterpriseMail_delete" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
         <a id="enterpriseMail_refresh" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-refresh'"></a>
     </div>

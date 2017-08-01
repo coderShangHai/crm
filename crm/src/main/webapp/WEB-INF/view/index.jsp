@@ -164,7 +164,7 @@
                 <li>
                     <span>信息系统</span>
                     <ul>
-                        <li>
+                        <li  data-options="iconCls:'icon-mail'">
                             <a data-model="tab"
                                data-url="${pageContext.request.contextPath}/enterpriseMail/index">企业邮件</a>
                         </li>
