@@ -17,7 +17,14 @@
     <input id="endDate" class="easyui-datebox" data-options="width:50,prompt:'发送日期至'">
     <input class="easyui-textbox" data-options="prompt:'关键字'" style="width:300px">
     <a id="enterpriseMail_search" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
-    <a id="enterpriseMail_clear" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'"></a>
+    <a id="enterpriseMail_clear" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'" title="重置查询条件"></a>
+
+    <div style="float: right">
+        <a id="enterpriseMail_setNature" href="#" style="margin-left: 400px" class="easyui-linkbutton" data-options="iconCls:'icon-set'">邮件类型设置</a>
+        <a id="enterpriseMail_sendMail" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-set'">邮件</a>
+        <a id="enterpriseMail_delete" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
+        <a id="enterpriseMail_refresh" href="#" style="margin-left: 5px" class="easyui-linkbutton" data-options="iconCls:'icon-refresh'"></a>
+    </div>
 </div>
 <table id="enterpriseMailTable">
 </table>
@@ -34,7 +41,6 @@
             singleSelect: true,
             pageSize: 30,
             onClickRow: function (rowIndex, rowData) {
-                $(this).datagrid('unselectRow', rowIndex);
             },
             columns: [
                 [
@@ -43,13 +49,13 @@
                     {title: '邮件标题', field: 'title', align: 'center', rowspan: 2, width: 300},
                     {title: '操作', field: 'option', align: 'center', rowspan: 2, width: 80,
                         formatter: function (value, row, index) {
-                            return "<a name='enterpriseMail_option' mailId='" + row.id + "'" + ">" + "<img  src='/images/details.png'>" + "</a>";
+                            return "<a name='enterpriseMail_option' mailId='" + row.id + "'" + ">" + "<img  src='/images/details.png' title='详情'>" + "</a>";
 
                         }},
                     {
                         title: '重发', field: 'resend', align: 'center', rowspan: 2, width: 80,
                         formatter: function (value, row, index) {
-                            return "<a name='enterpriseMail_resend' mailId='" + row.id + "'" + ">" + "<img  src='/images/action.png'>" + "</a>";
+                            return "<a name='enterpriseMail_resend' mailId='" + row.id + "'" + ">" + "<img  src='/images/action.png' title='重发'>" + "</a>";
 
                         }
                     }
