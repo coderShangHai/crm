@@ -27,20 +27,49 @@ public class DailyController {
         Calendar instance = Calendar.getInstance();
         Date date = getDate(instance);
         instance.setTime(date);
+        instance.set(Calendar.DATE, 1);
         int end = instance.getActualMaximum(Calendar.DAY_OF_MONTH);
         List<DailyReportVO> list = new ArrayList<>();
+        BigDecimal totalInGlod = BigDecimal.ZERO;
+        BigDecimal totalOutGlod = BigDecimal.ZERO;
+        BigDecimal totalNettedGlod = BigDecimal.ZERO;
+        BigDecimal totalVolume = BigDecimal.ZERO;
+        BigDecimal totalProfit = BigDecimal.ZERO;
+        BigDecimal totalCommision = BigDecimal.ZERO;
         for (int i = 1; i <= end; i++) {
             DailyReportVO vo = new DailyReportVO();
             if (i != 1) {
                 instance.add(Calendar.DATE, 1);
             }
             vo.setBillDate(getDateStr(instance));
-            vo.setCommision(BigDecimal.valueOf(10));
+            vo.setInGlod(BigDecimal.valueOf(new Random().nextInt() * 1000));
+            vo.setOutGlod(BigDecimal.valueOf(new Random().nextInt() * 1000));
+            vo.setNettedGlod(vo.getInGlod().subtract(vo.getOutGlod()));
+            vo.setVolume(BigDecimal.valueOf(new Random().nextInt(1000)));
+            vo.setProfit(BigDecimal.valueOf(new Random().nextInt(1000)));
+            vo.setCommision(BigDecimal.valueOf(new Random().nextInt(10)));
             list.add(vo);
+
+            totalInGlod = totalInGlod.add(vo.getInGlod());
+            totalOutGlod = totalOutGlod.add(vo.getOutGlod());
+            totalNettedGlod = totalNettedGlod.add(vo.getNettedGlod());
+            totalVolume = totalVolume.add(vo.getVolume());
+            totalProfit = totalProfit.add(vo.getProfit());
+            totalCommision = totalCommision.add(vo.getCommision());
+
         }
+        Map<String, Object> footer = new HashMap<>();
+        footer.put("inGlod", totalInGlod);
+        footer.put("outGlod", totalOutGlod);
+        footer.put("nettedGlod", totalNettedGlod);
+        footer.put("volume", totalVolume);
+        footer.put("profit", totalProfit);
+        footer.put("commision", totalCommision);
+
         Map<String, Object> result = new HashMap<>();
         result.put("total", list.size());
         result.put("rows", list);
+        result.put("footer", Arrays.asList(footer));
         return result;
     }
 
